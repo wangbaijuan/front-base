@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <ul>
+        <!-- 
+            1. 块元素（block）是块级元素（block、table、list-item、flex、grid）的一个子集
+                li元素是 list-item，在主要的块级框之外需要生成一个额外的框用于包含list-style-type；
+                如何去掉li的list-style-type：2种
+                    1.li改为block可以去掉list-style-type
+                    2.list-style: none;
+
+         -->
+        <style>
+            .li1 {
+                /* display: block; */
+                /* list-style-type: circle; */
+                /* list-style-type: none; */
+                padding-left: 20px;
+                list-style-image: linear-gradient(#0aa19e, #d44d44);
+            }
+        </style>
+        <li class="li1">1</li>
+        <li class="li1">2</li>
+        <li class="li1">3</li>
+    </ul>
+    <ul>
+        <style>
+            .li-2 {
+                float: left;
+                list-style: none;
+                width: 100px;
+/* 
+                text-align: center;
+                background-color: #d44d44;
+                height: 50px;
+                line-height: 50px; */
+            }
+            .li-2 a {
+                display: block;
+                /* text-decoration: none;
+                color: black;
+                height: inherit; */
+            }
+            .li-2 a:hover {
+                color: aliceblue;
+                background-color: #0aa19d;
+            }
+        </style>
+        <li class="li-2"><a href="http://">列表1</a></li>
+        <li class="li-2"><a href="http://">列表2</a></li>
+        <li class="li-2"><a href="http://">列表3</a></li>
+    </ul>
+</body>
+</html>

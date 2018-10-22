@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        页面中尽量少的使用img标签，因为一个img就代表一个网络请求，
+        从优化上去讲，就是减少HTTP请求次数。基本上所有的小logo，
+        小图片甚至banner图都可以用背景图片来解决，
+        但是只有一个情况，要用img，
+        就是图片想要被搜索引擎和爬虫收录的时候，就要用img，其余时候都可以用背景图
+     -->
+     <!-- img和背景图的使用：
+                1. img属于html标签，而background-image属于css
+                2. img标签可添加alt属性，其语义能被浏览器理解，也可以被读屏软件识别。-seo
+        
+        简而言之，img标签能更好的SEO，而background-image更加灵活。
+    此外，img属于html标签，代表文档内容，而background-image属于css，代表版式设计。
+    所以，当我们同时可以使用这二者的时候，我们不妨问自己，如果把css统统拿掉，
+    页面呈现的内容都属于文档内容吗？当你发现有些东西和内容无关，属于设计版式的时候，
+    考虑将img改成background-image
+
+        img的alt和title属性不同：alt：当无法显示图像时,浏览器将显示alt的内容；
+                                title表示鼠标在图片上停留时，显示一个悬浮框，其中显示的文字
+    -->
+</body>
+</html>

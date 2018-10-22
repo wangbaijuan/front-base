@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+        .login {
+            position: relative;
+        }
+        .login .user {
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            background-color: #d44d44;
+        }
+        #user {
+            padding: 10px 10px 10px 30px;
+            width: 300px;
+            height: 50px;
+            font-size: 30px; /*光标*/
+        }
+        /* #user::-webkit-input-placeholder {
+            font-size: 16px;
+        } */
+        .what {
+            background-color: #069;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. 输入框左边的图标利用绝对定位，
+         2. position值为absolute或fixed的元素，可以设置宽高， label元素是行内元素-->
+    <!-- 3. 给输入框设置padding来改变光标的位置 -->
+    <!-- 4. for和id属性不是必须时，把input嵌套在label标签中 -->
+    <form class="login">
+        <label class="user" for="user"> <i class="fa fa-rocket"></i> </label>
+        <label class="user" for="user"> <i class="fa fa-rocket"></i> </label>
+        <input id="user" type="text" placeholder="请输入用户名">
+
+        <label class="what"> label是什么元素 </label>
+    </form>   
+    <hr/>
+    <br/>
+    <label>
+        <input type="checkbox" name="terms-and-conditions">
+        I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a>
+    </label> 
+</body>
+</html>

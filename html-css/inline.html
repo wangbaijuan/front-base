@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            /* height: 100px; */
+            background: #0aa1ed;
+            word-wrap: break-word;
+        }
+        input {
+            width: 300px;
+            height: 100px;
+            background-color: #0aa1d9;
+        }
+        i {
+            /* background-color: #d44d44; */
+            width: 200px;
+            height: 200px;
+            /* margin: 0 100px; */
+            padding: 0 100px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- 行内元素：display属性值为inline的元素，比如span、a、i、label(表单标签)，
+        4个特征：
+            1. 不会和block元素一样独占一行，多个inline元素会排成一行，达到父元素最大宽度折行
+            2. 设置宽高无效 
+            3. 可以设置左右内外边距，调整行内元素之间的间距
+                3-1. 设置上下外边距无效
+                3-2. 设置内边距有效，但是上下内边距不占据位置，左右内边距会占据空间 
+    -->
+    <i>这是span标签</i> <span>喀什假大空法律</span>
+    <i>这是span标签</i> <span>喀什假大空法律</span>
+    <div>
+        <span>askdjfklsjdfkasjdlfksdffsadfasdfasdlfaskldjf</span>
+        <span>askdjfklsjdfkasjdlfksdffsadfasdfasdlfaskldjf</span>
+        <span>askdjfklsjdfkasjdlfksdffsadfasdfasdlfaskldjf</span>
+    </div>    
+    <!-- <input type="text" placeholder="请输入用户名"> -->
+</body>
+</html>

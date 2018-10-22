@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html * {
+            padding: 0;
+            margin: 0;
+        }
+    .container {
+        background-color: #333;
+        /* margin-top: 50px; */
+    }
+    .container div {
+        width: 100px;
+        height: 100px;
+        background-color: #d44d44;
+    }
+    .container .box2 {
+        background-color: #0aa1d9;
+    }
+    </style>
+</head>
+<body>
+    <section>
+    <!-- 溢出隐藏 -->
+        <style>
+            .container.hidden {
+                height: 200px;
+                overflow: hidden;    
+            }
+            .container.hidden .box2 {
+                height: 300px;
+            }
+        </style>
+        <div class="container hidden">   
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+    </section>
+    <section>
+    <!-- 高度坍塌 -->
+        <style>
+            .container.collapse {
+                overflow: hidden;
+            }
+            .container.collapse .box1 {
+                margin-top: 50px;
+            }
+        </style>
+        <div class="container collapse">   
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+    </section>
+    <section>
+    <!-- 清除浮动
+    子元素浮动撑开父元素
+    -->
+        <style>
+            .container.clearfloat {
+                /* 清除浮动方式一 ：父元素高度未知，*/
+                /* overflow: hidden; */
+                /* 清除浮动方式二：父元素高度固定，需要计算子元素的总高度 */
+                /* height: 100px; */
+                 /* 清除浮动方式三：父元素也浮动，但是要显示的设置宽度 */
+                float: left;
+                width: 100%;
+            }
+            .container.clearfloat .box1, 
+            .container.clearfloat .box2 {
+                float: left;
+            }
+        </style>
+        <div class="container clearfloat">   
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+    </section>
+</body>
+</html>
