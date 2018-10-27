@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<style type="text/css">
+		body,html{
+			font-size: 20px;
+		}
+
+		option {
+			height:25px;
+		}
+	</style>
+</head>
+<body>
+	<select class="province">
+		<option value="hb" >河北省</option>
+		<option value="bj">北京市</option>
+	</select>
+	<select class="city">
+	</select>	
+</body>
+
+<script src="http://192.168.1.11/public/js/jquery.min.js"></script>
+<script type="text/javascript">
+	var bj = new Array();
+	bj['bj'] = "北京市";
+	var hb = new Array();
+	hb['bd'] = "保定";
+	hb['lf'] = "廊坊";
+
+	var cities = {
+		bj:bj,
+		hb:hb
+	};
+			console.log(cities);
+
+	$(document).on("change", ".province", function(){
+			console.log($(this).val());
+			var province = $(this).val();
+			var city;
+			switch(province){
+				case "bj":
+					city = cities['bj'];
+					break;
+				case "hb":
+					city = cities['hb'];
+					break;
+			}
+			console.log(city['bj']);
+			var html = "";
+			for(i in city){
+    			console.log(i + "=" + city[i]);
+    			html += "<option value='"+i+"'>"+city[i]+"</option>";
+			}
+			$(".city").html(html);
+			
+	});
+
+	var num1 = [1,2,3,4,6,8,20];
+	var num2 = [3,5,7,9,10,34,66];
+
+	function getMaxNum(num1, num2) {
+		document.write("<br/>");
+		document.write("num1 =="+JSON.stringify(num1)+"<br/>");
+		document.write("num2 =="+JSON.stringify(num2)+"<br/>");
+
+		var collection = new Array();
+		var num2Str = num2.join(",");
+		for(var i=0;i<num1.length; i++){
+			var num = num1[i];
+			if(num2Str.indexOf(num) >-1) {
+				collection.push(num);
+			}
+		}
+		document.write("num1 num2 交集是==="+JSON.stringify(collection)+"<br/>");
+		collection.sort(sortNumber);
+		document.write(" max num is " + collection.pop());
+	}
+
+	function sortNumber(a,b)
+	{
+		return a - b
+	}
+
+	getMaxNum(num1, num2);
+</script>
+</html>

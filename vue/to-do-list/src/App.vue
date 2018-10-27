@@ -8,7 +8,7 @@
 <script>
 
 // defined
-import TodoList1 from './components/TodoList.vue'
+import TodoList from './components/TodoList.vue'
 
 export default {
 	components: {

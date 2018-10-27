@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1 = [2,3,5,6,8];    
+        var arr2 = [1,3,5,1,9,12];
+        /** 
+        * -1 : 没有交际
+           Number.MIN_VALUE : 有交集，没有偶数
+           偶数：最大偶数
+        */
+        function getEven(arr1,arr2){
+            
+            if(arr1.length === 0 || arr2.length === 0){
+                return -1;
+            }
+            var obj = {};
+            for(var i = 0; i < arr1.length; i++){
+                if(!obj[arr1[i]]){
+                    obj[arr1[i]]=arr1[i];
+                }
+            }
+
+            var even = Number.MIN_VALUE; // 最小值
+            var status = false; // 没有交际
+            for(var i = 0; i < arr2.length; i++){
+                if(obj[arr2[i]]){
+                    status = true;
+                    if(arr2[i] % 2 === 0){
+                        even = even > arr2[i] ? even:arr2[i];
+                    }
+                }
+            }
+
+            if(status) {
+                return even;
+            }
+            else{
+                return -1;
+            }
+
+           
+        }
+        console.log(getEven(arr1,arr2));
+
+        var jsObject = {
+            k1:"v1"
+        }
+
+        var jsonString = '{"k1":"v1"}';
+
+        var jsonObject = {
+            "k1":"v1"
+        }
+        
+        console.log(jsonObject);
+        console.log(JSON.parse(jsonString)); // 从后台接受到的数据
+        console.log(JSON.stringify(jsObject)); // 向后台接口发送数据
+        console.log(JSON.stringify(jsObject) === jsonString);
+
+
+        console.log(jsonObject.k1)
+    </script>
+</body>
+</html>

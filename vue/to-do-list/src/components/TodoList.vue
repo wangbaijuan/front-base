@@ -1,10 +1,12 @@
 <template>
 	<div>
-		  <!-- v-bind:value="newTodoText"
+<!-- v-bind:value="newTodoText"
   v-on:input="newTodoText = $event" -->
-
+<!-- v-model="newTodoText" -->
+<!-- v-bind:value="newTodoText" -->
 		<BaseInputText 
-			v-model="newTodoText"
+
+			v-on:input="newTodoText = $event" 
 			placeholder="New todo"
 			@keydown.enter="addTodo"
 		/>
