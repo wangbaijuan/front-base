@@ -6,7 +6,7 @@
 <!-- v-bind:value="newTodoText" -->
 		<BaseInputText 
 
-			v-on:input="newTodoText = $event" 
+			v-model="newTodoText"
 			placeholder="New todo"
 			@keydown.enter="addTodo"
 		/>
